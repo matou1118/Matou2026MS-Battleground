@@ -98,6 +98,7 @@ cd azerothcore-wotlk
 
 | 文档 | 用途 |
 |---|---|
+| **`ANNOUNCEMENT.md`** | **公告版** —— 可直接发群/发帖，无技术术语 |
 | **`RELEASE_NOTES.md`** | **版本说明** —— 基线、重点更新、升级步骤、破坏性变更 |
 | **`CHANGELOG.md`** | **版本迭代说明** —— 技术记录，按模块分类，含排查过程 |
 | **`docs/TROUBLESHOOTING.md`** | 常见问题排查（先看这个，能解决大部分问题）|
@@ -241,6 +242,7 @@ azerothcore-wotlk/
 ```
 .
 ├── README.md                  本文件
+├── ANNOUNCEMENT.md            公告版（可直接发群/发帖）
 ├── RELEASE_NOTES.md           **版本说明**（面向使用者）
 ├── CHANGELOG.md               版本迭代说明（技术记录）
 ├── LICENSE                    GPLv2 全文
