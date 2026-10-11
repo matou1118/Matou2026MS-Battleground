@@ -69,9 +69,32 @@
 > **禁止任何形式的商业用途**。
 > 详见 [`DISCLAIMER.md`](DISCLAIMER.md)。
 
-> ⚠️ GPLv2 不允许附加限制。若本项目以 GPLv2 授权，
-> 上述「禁止商用」在法律上**不具备强制执行力**（GPLv2 §7 明确禁止
-> 对 GPL 程序施加附加限制）。
+> ⚠️ **关于「禁止商用」在 GPLv2 下的效力**
+>
+> 这不是本项目的特殊顾虑，而是整个 AzerothCore 生态的共性问题。
+> 参考上游的实际做法：
+>
+> - **AzerothCore 本身**采用纯 GPLv2，未附加任何非商用条款。其 README 原话：
+>   "AzerothCore does in any case sponsor nor support illegal public servers.
+>   If you use this project to run an illegal public server and not for testing
+>   and learning it is your own personal choice."
+> - **AzerothCore 曾尝试改用 AGPL 并被迫回退**（2024-09 公告 #19868）。
+>   原因：其代码源自 TrinityCore/MaNGOS 的 GPLv2+ 作品，
+>   加 AGPL 在法律上不成立，官方自述为 "a mistake on our part"。
+> - **mod-playerbots 各 fork 授权不一**（GPLv2 / AGPL），
+>   但**没有任何一个添加非商用条款**。
+>
+> 法律层面，GPLv2 序言明确写道：
+>
+> > Activities other than copying, distribution and modification are not covered
+> > by this License; they are outside its scope. **The act of running the Program
+> > is not restricted.**
+>
+> 配合 §7「You may not impose any further restrictions on the recipients'
+> exercise of the rights granted herein」，可得结论：
+>
+> **「能否运行服务器」根本不在 GPLv2 的管辖范围内，
+> 因此不可能通过附加条款来约束。**
 >
 > 该声明的性质是：
 > - 作者的**使用意愿声明**
@@ -79,11 +102,15 @@
 > - 发生侵权时的**主张依据**
 >
 > 而非许可证层面的技术性封锁。
-> 若需要技术上可强制的「禁止商用」效果，
-> 则必须改用非自由许可（如 BUSL、SSPL 等），
-> 届时将不再符合 GPLv2 的兼容要求。
 >
-> **当前决策：保持 GPLv2 以确保与上游兼容，合规风险由作者自行承担。**
+> **生态中真正约束商业化的是暴雪娱乐的著作权与 EULA**
+> ——任何人在未获授权的情况下运营商业 WoW 服务器，
+> 均违反暴雪的用户许可协议，可被 DMCA 下架。
+> 本项目通过**不分发任何暴雪数据**来降低该风险，
+> 但这并不能替代用户自身的合规判断。
+>
+> **当前决策：保持 GPLv2 以确保与上游兼容与可贡献性，
+> 合规风险由使用者自行承担。**
 
 ---
 
