@@ -61,6 +61,24 @@ AI 机器人框架，并针对**战场（Battleground）**场景做了深度强�
 > ⚠️ **前置条件**：你必须**自行持有正版 WoW 3.3.5 客户端**。
 > 本项目不包含也不分发任何暴雪娱乐的数据文件。
 
+### 0. 获取源码
+
+本项目发布**完整源码树**，下载后解压即可编译：
+
+```bash
+tar -xzf Az335_Source_2026.10.tar.gz
+cd azerothcore-wotlk
+```
+
+若你希望从上游开始叠加本项目的改动（便于日后合并上游），请使用
+[`patches/`](patches/) 目录下的两个补丁文件 —— 它们记录了本项目
+相对上游的**全部**改动（核心 195 行 / mod-playerbots 1,326 行）。
+
+| 文件 | 基线 | 本项目提交 |
+|---|---|---|
+| azerothcore-wotlk (fork) | `2a2211cd8f3d157da432ec0175ddd4b8a191931f` | `6b18686` |
+| modules/mod-playerbots | `037c01418b5d01506917a3db9b44fd56ac5f965c` | `939f9cb` |
+
 ### 1. 环境要求
 
 | 项目 | 最低 | 推荐 |
@@ -85,6 +103,9 @@ git submodule update --init --recursive
 ```
 
 ### 3. 应用本项目补丁
+
+> **使用本仓库提供的源码包时无需此步** —— 改动已包含在源码中。
+> 以下步骤适用于从上游 clone 后自行叠加。
 
 ```bash
 # 核心侧修改（战场 AI、训练师、ThreatManager 修复）
@@ -191,6 +212,22 @@ AiPlayerbot.botActiveAloneSmartScale = 0
 
 ## 项目结构
 
+### 源码包 `Az335_Source_2026.10.tar.gz`（271 MB / 13,775 文件）
+
+```
+azerothcore-wotlk/
+├── src/           2,041 文件   核心服务端
+├── modules/       2,958 文件   含 mod-playerbots（本项目主要改动）
+├── data/sql/      7,818 文件   数据库建库脚本
+├── deps/          依赖库
+├── conf/ tools/ apps/ env/ doc/
+└── CMakeLists.txt LICENSE
+```
+
+**不含**：`.git`、`build/`、`install/`、任何暴雪数据。
+
+### 文档与工具包（本仓库）
+
 ```
 .
 ├── README.md                  本文件
@@ -200,21 +237,29 @@ AiPlayerbot.botActiveAloneSmartScale = 0
 ├── NOTICE.md                  第三方组件与授权声明
 ├── AUTHORS.md                 致谢
 ├── CONTRIBUTING.md            贡献指南
+├── .gitignore                 拦截暴雪数据 / 凭据 / 编译产物
 ├── docs/
 │   ├── ARCHITECTURE.md        架构与关键改动说明
 │   ├── TROUBLESHOOTING.md     常见问题排查
 │   └── PORTING.md             移植到 2.4.3 / TrinityCore / 4.x
 ├── patches/
-│   ├── core_azerothcore.patch 核心侧修改
-│   └── mod-playerbots.patch   机器人模块修改
+│   ├── core_azerothcore.patch 核心侧修改（195 行）
+│   └── mod-playerbots.patch   机器人模块修改（1,326 行）
 ├── lua_scripts/
-│   └── 码头哥炉石.lua          传送炉石脚本
+│   ├── 码头哥炉石.lua          传送炉石脚本
+│   └── 天蓝超级炉石自用 微调2.0版.lua.ORIGINAL.bak  原始版本，供对照
 ├── config-templates/           配置模板（已脱敏）
 └── scripts/
     ├── dbc_import.py           DBC 解析导入
     ├── gear_up_naked_bots.py   批量装备分配
     └── restyle_hstone.py       脚本配色规范化
 ```
+
+### 本机运行快照（不公开）
+
+`Az335_FULL_20261010.tar.gz`（2.04 GB）是完整的可运行环境快照，
+含 MySQL、地图数据与已装好的数据库。
+**因包含暴雪数据，不能公开发布。**
 
 ---
 
