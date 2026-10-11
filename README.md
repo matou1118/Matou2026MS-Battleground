@@ -94,6 +94,16 @@ cd azerothcore-wotlk
 > ⚠️ **并行度说明**：使用 `-j 16` 或更高会将可用内存压至 7 MB 并冻结机器。
 > Windows 下务必使用 `-j 2`。
 
+### 文档导航
+
+| 文档 | 用途 |
+|---|---|
+| **`RELEASE_NOTES.md`** | **版本说明** —— 基线、重点更新、升级步骤、破坏性变更 |
+| **`CHANGELOG.md`** | **版本迭代说明** —— 技术记录，按模块分类，含排查过程 |
+| **`docs/TROUBLESHOOTING.md`** | 常见问题排查（先看这个，能解决大部分问题）|
+| `docs/ARCHITECTURE.md` | 架构与关键改动设计依据 |
+| `docs/PORTING.md` | 移植到 2.4.3 / TrinityCore / 4.x |
+
 ### 2. 获取源码
 
 ```bash
@@ -231,7 +241,8 @@ azerothcore-wotlk/
 ```
 .
 ├── README.md                  本文件
-├── CHANGELOG.md               版本迭代说明
+├── RELEASE_NOTES.md           **版本说明**（面向使用者）
+├── CHANGELOG.md               版本迭代说明（技术记录）
 ├── LICENSE                    GPLv2 全文
 ├── DISCLAIMER.md              免责声明 + 非商用声明
 ├── NOTICE.md                  第三方组件与授权声明
