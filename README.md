@@ -203,7 +203,7 @@ AiPlayerbot.botActiveAloneSmartScale = 0
 ├── docs/
 │   ├── ARCHITECTURE.md        架构与关键改动说明
 │   ├── TROUBLESHOOTING.md     常见问题排查
-│   └── PORTING.md             移植到其他版本
+│   └── PORTING.md             移植到 2.4.3 / TrinityCore / 4.x
 ├── patches/
 │   ├── core_azerothcore.patch 核心侧修改
 │   └── mod-playerbots.patch   机器人模块修改
