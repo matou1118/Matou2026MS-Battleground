@@ -1,6 +1,6 @@
 # 码头哥 2026 MS 战场版
 
-> 官网 / Official site: https://ttread.cn
+> 官网 / Official site: https://www.ttread.cn/
 
 > **Matou 2026 MS Battleground Edition**
 > 面向《魔兽世界》3.3.5 (巫妖王之怒) 的 AI 机器人服务器端增强版本
